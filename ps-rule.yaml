@@ -1,4 +1,13 @@
+output:
+  culture:
+    - en-AU
+
 configuration:
   AZURE_BICEP_FILE_EXPANSION: true
   modules:
     - PSRule.Rules.Azure
+
+input:
+  pathIgnore:
+    - modules/**/*.bicep
+    - "!modules/**/*.test.bicep"
